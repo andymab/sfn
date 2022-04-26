@@ -13,10 +13,14 @@ class Avroraloc__
         $elements = \Connect::get_content('catalogs', ['mgroup_id', 'metal', 'specifications', 'img']);
         foreach ($elements as $element) {
             if (strpos($element->img, '/')) {
+
                 $path =  str_replace('/' . basename($element->img), '', $element->img); // basename($element->img); die;
                 if (!file_exists(rPATH . '/media/' . $path)) {
-
                     mkdir(rPATH . '/media/' . $path, 0777, 1);
+                }
+
+                if(file_exists(rPATH . '/media/' . $element->img)){
+                    continue;
                 }
 
                 if (!file_exists(rPATH . '/media/products/m/' . $element->img)) {
