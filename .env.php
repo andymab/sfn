@@ -1,9 +1,10 @@
 <?php
 /** @var rPATH global PATH */
 define('rPATH', $_SERVER['DOCUMENT_ROOT']);
-define('DB_NAME', 'ru355000');
-define('DB_USER', 'ru355000');
-define('DB_PSWD', 'ru355000txt472');
+define('DB_HOST', 'localhost');
+define('DB_NAME', 'avrora_loc');
+define('DB_USER', 'root');
+define('DB_PSWD', '');
 
 
 date_default_timezone_set('Europe/Moscow');

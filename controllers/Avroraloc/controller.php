@@ -7,7 +7,7 @@ class Avroraloc extends \Controller
     public function __construct()
     {
         parent::__construct();
-        //$this->set_action_class( new Home );
+        $this->set_action_class( new Avroraloc__() );
     }
 
     public function Index()
@@ -15,5 +15,9 @@ class Avroraloc extends \Controller
 
         $this->Views->render( 'index' );
     }
+
+
+
+
 
 }
